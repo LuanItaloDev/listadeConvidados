@@ -7,19 +7,47 @@
     <title>Lista de Convidados</title>
 </head>
 <body>
-    <h1>Lista de Convidados</h1>
-
-    <div id="listaConvidados">
-    <ul>
+    <div id="app">
+        <h1>Lista de Convidados</h1>
+        <ul id="lista"></ul>
+  
+        <input id="campo" type="text" placeholder="Digite o nome do convidado" />
+        <button id="botao">Cadastrar</button>
+      </div>
+      <script type="text/javascript">
+        var elLista = document.getElementById("lista");
+        var elCampo = document.getElementById("campo");
+        var elBotao = document.getElementById("botao");
+  
+        var convidados = [
+          { nome: "Bruno de Souza" },
+          { nome: "Jefferson Andrade" },
+          { nome: "Maria José", },
+          { nome: "José da Silva", }
+        ];
         
-    </ul>
-    </div>
-    <div id="formulario">
-        <input type="text" placeholder="Digite o nome do Convidado">
-        <Button>Cadastrar</Button>
-    </div>
-
+        function listarConvidados(){
+            elLista.innerHTML = "",
+            
+            for (convidado of convidados) {
+            var elConvidado = document.createElement("li");
+            var elNome = document.createTextNode(convidado.nome);
     
+            elConvidado.appendChild(elNome);
+            elLista.appendChild(elConvidado);
+            }
+        }
 
+        listarConvidados();
+        
+        var adicionarConvidado = function(){
+            var nome = elCampo.value;
+            
+            convidados.push({nome: nome})
+            listarConvidados();            
+        };
+
+        elBotao.onclick = adicionarConvidado;
+      </script>
 </body>
 </html>
