@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: beige;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#app{
+    margin: auto;
+    background-color: aquamarine;
+    border-radius: 15px;
+    width: 100vh;
+    height:500px;
+    
+    box-shadow:5px 5px 10px gray;
+}
+
+#app h1{
+    text-align: center;
+    padding: 10px;
+}
+
+#lista{
+    color: rgb(65, 65, 65);
+    width: 80%;
+    margin: auto;
+}
+
+#app input {
+    border: 0px;
+    border-radius: 10px;
+    width: 40%;
+    height: 30px;
+}
+#app button {
+    border: 0px;
+    border-radius: 10px;
+    width: 25%;
+    height: 30px;
+    background-color: rgb(55, 233, 39);
+    color: white;
+    font-size: 1em;
+}
